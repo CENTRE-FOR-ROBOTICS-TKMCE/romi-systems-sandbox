@@ -28,7 +28,15 @@ def generate_launch_description():
         output='screen',
     )
 
+    wheel_pid_controller = Node(
+        package='wheel_pid_controller',
+        executable='wheel_pid_controller',
+        name='wheel_pid_controller',
+        output='screen',
+    )
+
     return LaunchDescription([
         gazebo,
         gui_controller,
+        wheel_pid_controller
     ])
